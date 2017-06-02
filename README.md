@@ -7,6 +7,8 @@ Computers & Geosciences 105 (2017) 120-128
 JMorph: Software for performing rapid morphometric measurements on digital images of fossil assemblages  
 Peter G. Lelièvre, Melissa Grey
 
+File "cageo/jmorphdoc.pdf" contains a quick-start tutorial with installation instructions.
+
 Folder "currentdev" is the most recent working version of JMorph.
 
 The "currentdev/dist" folder contains the JMorph distribution as a compiled .jar file.
