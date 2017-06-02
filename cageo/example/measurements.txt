@@ -1,0 +1,10 @@
+9
+area        polygonal_area
+spline      splined_area
+outline     fourier_outline
+angle       umbo_angle
+landmark    umbo_landmark
+length      maximum_length
+radius      umbo_radius
+separation  growth_line_separation
+count       growth_lines
