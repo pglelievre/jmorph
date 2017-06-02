@@ -13,4 +13,4 @@ The "dist" folder contains the JMorph distribution as a compiled .jar file.
 Please contact the primary developer at plelievre@mun.ca if you wish to obtain source code  
 (I'm completely happy to share the source code but I'd prefer to know who is using it and for what purposes).
 
-To obtain the most recent version of JMorph, go here:
+The most recent version of JMorph is here: ../currentdev
