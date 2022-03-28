@@ -3,7 +3,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 ### Bugs squashed
+- Fixed erroneous error message that was occurring when all files were loaded successfully.
 ### Changed
+- Changed contact email.
 
 ## 2022-03-04
 ### Bugs squashed
