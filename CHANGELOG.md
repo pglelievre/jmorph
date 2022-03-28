@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 - Fixed erroneous error message that was occurring when all files were loaded successfully.
 ### Changed
 - Changed contact email.
+- Duplicate image files (same image used for multiple samples) are no longer kept in memory.
 
 ## 2022-03-04
 ### Bugs squashed
