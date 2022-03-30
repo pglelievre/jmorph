@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - Changed contact email.
 - Duplicate image files (same image used for multiple samples) are no longer kept in memory.
 - Added options in new Advanced menu to read and store image files all at once (memory heavy), as encountered, or each time the sample image changes (memory light, time heavy).
+- If a file can not be found when loading, all samples are still created. No warning message is provided after loading but the image will not show up when navigating to the sample and the sample information panel will provide further information.
 
 ## 2022-03-04
 ### Bugs squashed
