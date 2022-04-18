@@ -11,7 +11,9 @@ File "cageo/jmorphdoc.pdf" contains a quick-start tutorial with installation ins
 
 Folder "currentdev" is the most recent working version of JMorph.
 
-The "currentdev/dist" folder contains the JMorph distribution as a compiled .jar file.
+The "currentdev/dist8" folder contains the JMorph distribution as a compiled .jar file using JDK 8.
+
+The "currentdev/dist16" folder contains the JMorph distribution as a compiled .jar file using JDK 16.
 
 Please contact the primary developer at plelievre@mta.ca if you wish to obtain source code  
 (I'm completely happy to share the source code but I'd prefer to know who is using it and for what purposes).
