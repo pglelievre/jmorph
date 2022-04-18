@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 ### Bugs squashed
+### Changed
+
+## 2022-04-18
+### Bugs squashed
 - Fixed erroneous error message that was occurring when all files were loaded successfully.
 - When reading multiple images files, if the user cancels the progress bar then anything loaded before cancelling is removed (the entire loading procedure is cancelled).
 ### Changed
