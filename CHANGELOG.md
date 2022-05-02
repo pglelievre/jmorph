@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 ### Bugs squashed
 ### Changed
+- The centroid coordinates for the radius measurement are now printed to the information panel.
 
 ## 2022-04-18
 ### Bugs squashed
