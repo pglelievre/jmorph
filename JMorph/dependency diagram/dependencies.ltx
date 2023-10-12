@@ -1,0 +1,114 @@
+\documentclass[11pt]{article}
+
+\usepackage{tikz}
+ 
+\usepackage{geometry}
+\geometry{
+  left=0.5in,
+  top=0.5in
+}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1,
+us/.style={latex-}, % usage
+ex/.style={latex-}, % inheritance (extension)
+im/.style={dashed,<-}, % implementation
+co/.style={latex reversed-}] % composition
+\tikzstyle{every path}=[line width=1.5]
+
+\node (SampleList) at (0,0) {SampleList};
+\node (Sample) at (2,-1) {Sample};
+\node (MeasurementList) at (0,-2) {MeasurementList};
+\node (Outline) at (2,-3) {Outline};
+\node (Spline) at (2,-4) {Spline};
+\node (Area) at (2,-5) {Area};
+\node (Calibration) at (4,-4) {Calibration};
+\node (Length) at (4,-5) {Length};
+\node (Origin) at (6,-4) {Origin};
+\node (Landmark) at (6,-5) {Landmark};
+\node (Angle) at (8,-5) {Angle};
+\node (Radius) at (10,-5) {Radius};
+\node (Separation) at (12,-5) {Separation};
+\node (Zoom) at (14,-5) {Zoom};
+\node (DefaultMeasurement) at (7,-7) {DefaultMeasurement};
+\node (Measurement) at (0,-8) {Measurement};
+\node (Paintable) at (4,-8) {Paintable};
+
+\draw [co] (SampleList) -- (MeasurementList);
+\draw [co] (SampleList) -- (Sample);
+\draw [co] (MeasurementList) -- (Measurement);
+\draw [co] (Sample) -- (MeasurementList);
+\draw [co] (Sample) -- (Calibration);
+\draw [co] (Sample) -- (Origin);
+\draw [co] (Sample) -- (Zoom);
+\draw [ex] (Outline) -- (Spline);
+\draw [ex] (Spline) -- (Area);
+\draw [ex] (Calibration) -- (Length);
+\draw [ex] (Origin) -- (Landmark);
+\draw [co] (Area) -- (DefaultMeasurement);
+\draw [co] (Length) -- (DefaultMeasurement);
+\draw [co] (Landmark) -- (DefaultMeasurement);
+\draw [co] (Angle) -- (DefaultMeasurement);
+\draw [co] (Radius) -- (DefaultMeasurement);
+\draw [co] (Separation) -- (DefaultMeasurement);
+\draw [co] (Zoom) -- (DefaultMeasurement);
+\draw [im] (DefaultMeasurement) -- (Measurement);
+\draw [im] (DefaultMeasurement) -- (Paintable);
+
+\draw [-,dashed] (-2,-8.5) -- (16,-8.5);
+
+\node (CatmullRom) at (0,-9) {CatmullRom};
+\node (CirclePreserving) at (3,-9) {CirclePreserving};
+\node (KnotsAndTangents) at (0,-10) {KnotsAndTangents};
+\node (PeriodicCubic) at (11,-10) {PeriodicCubic};
+\node (ClosedOutline) at (0,-11) {ClosedOutline};
+\node (TangentPair) at (3,-11) {TangentPair};
+\node (JoinedSegments) at (6,-11) {JoinedSegments};
+\node (CubicPair) at (9,-11) {CubicPair};
+\node (PeriodicSegments) at (13,-11) {PeriodicSegments};
+
+\draw [ex] (CatmullRom) -- (KnotsAndTangents);
+\draw [ex] (CirclePreserving) -- (KnotsAndTangents);
+\draw [im] (KnotsAndTangents) -- (ClosedOutline);
+\draw [co] (KnotsAndTangents) -- (TangentPair);
+\draw [co] (PeriodicCubic) -- (PeriodicSegments);
+\draw [co] (PeriodicCubic) -- (CubicPair);
+\draw [co] (KnotsAndTangents) -- (JoinedSegments);
+
+\draw [-,dashed] (-2,-11.5) -- (16,-11.5);
+
+\node (HAngle) at (3,-12) {HAngle};
+\node (HCurve) at (6,-12) {HCurve};
+\node (MyPolygon) at (3,-13) {MyPolygon};
+\node (Circle) at (0,-14) {Circle};
+\node (MyPoint2DVector) at (3,-14) {MyPoint2DVector};
+\node (MyPoint2D) at (3,-15) {MyPoint2D};
+\node (ComplexVector) at (6,-13) {ComplexVector};
+\node (FFT) at (9,-14) {FFT};
+\node (ConjugateGradients) at (12,-14) {ConjugateGradients};
+\node (Complex) at (6,-15) {Complex};
+
+\draw [co] (HAngle) -- (MyPolygon);
+\draw [co] (HCurve) -- (MyPolygon);
+\draw [co] (HAngle) -- (ComplexVector);
+\draw [co] (HCurve) -- (ComplexVector);
+\draw [ex] (MyPolygon) -- (MyPoint2DVector);
+\draw [co] (MyPoint2DVector) -- (MyPoint2D);
+\draw [co] (Circle) -- (MyPoint2D);
+\draw [co] (ComplexVector) -- (Complex);
+\draw [co] (FFT) -- (Complex);
+
+\draw [-,dashed] (-2,-15.5) -- (16,-15.5);
+
+\node (MathUtils) at (0,-16) {MathUtils};
+\node (FileUtils) at (3,-16) {FileUtils};
+\node (ImageFilter) at (6,-16) {ImageFilter};
+\node (SessionFilter) at (9,-16) {SessionFilter};
+\node (ListDialogs) at (12,-16) {ListDialogs};
+\node (Dialogs) at (15,-16) {Dialogs};
+
+
+\end{tikzpicture}
+
+\end{document}
