@@ -9,11 +9,9 @@ Peter G. Lelièvre, Melissa Grey
 
 File "cageo/jmorphdoc.pdf" contains a quick-start tutorial with installation instructions.
 
-Folder "currentdev" contains compiled .jar files for the most recent working version of JMorph.
-- The "currentdev/dist8" folder contains the JMorph distribution as a compiled .jar file using JDK 8.
-- The "currentdev/dist19" folder contains the JMorph distribution as a compiled .jar file using JDK 19.
-
-Folder "JMorph" contains source code, test files, and other things for developers.
+Folder "JMorph" (previously named "currentdev") contains compiled .jar files, source code, test files, and other things for developers, for the most recent working version of JMorph.
+- The "JMorph/dist8" folder contains the JMorph distribution as a compiled .jar file using JDK 8.
+- The "JMorph/dist19" folder contains the JMorph distribution as a compiled .jar file using JDK 19.
 
 CONDITIONS OF USE:  
 - Properly cite usage of JMorph in any publications resulting from its use.  
