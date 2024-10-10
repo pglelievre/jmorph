@@ -7,9 +7,9 @@ All notable changes to this project will be documented in this file.
 
 ## 2024-10-10
 ### Changed
-- Added option to clear calibration.
 - The centroid coordinates for the radius measurement are now printed to the information panel.
 - Outline measurements that don't require calibration are now output even if not calibrated.
+- Added option to clear calibration.
 
 ## 2022-04-18
 ### Bugs squashed
