@@ -174,7 +174,8 @@ public class OutlineMeasurement extends SplineMeasurement {
         return ( factor!=NULL_CALIBRATION_DISTANCE && trans!=null ); // needs both factor and origin
     }
     protected boolean canBeCalibratedAnything(double factor, AffineTransform trans) {
-        return ( factor!=NULL_CALIBRATION_DISTANCE );
+        //return ( canBeCalibratedArea(factor,trans) | canBeCalibratedCentroid(factor,trans) | canBeCalibratedLength(factor,trans) | canBeCalibratedFourier(factor,trans) );
+        return true; // because we can always show the measurement direction information
     }
     protected boolean canBeCalibratedArea(double factor, AffineTransform trans) {
         return ( factor!=NULL_CALIBRATION_DISTANCE );
@@ -184,6 +185,13 @@ public class OutlineMeasurement extends SplineMeasurement {
     }
     protected boolean canBeCalibratedLength(double factor, AffineTransform trans) {
         return ( factor!=NULL_CALIBRATION_DISTANCE ); // needs factor only
+    }
+    protected boolean canBeCalibratedFourier(double factor, AffineTransform trans) {
+        //if ( fourierAnalysisMethod == FOURIER_ANALYSIS_METHOD_TANGENT_VS_ARCLENGTH ) {
+            return true;
+        //} else {
+        //    return ( factor!=NULL_CALIBRATION_DISTANCE );
+        //}
     }
 
     /** Provides a string that holds the value of the calculated and calibrated measurement.
@@ -215,7 +223,7 @@ public class OutlineMeasurement extends SplineMeasurement {
         // Check if everything can be calibrated:
         if (!canBeCalibrated(factor,trans)) {
             s += System.lineSeparator() + "   (not everything can be displayed"
-                    + System.lineSeparator() + "   because sample not calibrated)";
+                    + System.lineSeparator() + "   because sample not completely calibrated)";
         }
         
         // Write the area:
@@ -248,7 +256,7 @@ public class OutlineMeasurement extends SplineMeasurement {
         if (!longDisplay) { return s; }
         
         // Now write all the FFT coefficients:
-        if (fourierCoefficients==null) {
+        if ( fourierCoefficients==null | !canBeCalibratedFourier(factor,trans) ) {
             s += System.lineSeparator() + "   (Fourier analysis not performed)";
         } else {
             int n = highestFFTCoefficient + 1;

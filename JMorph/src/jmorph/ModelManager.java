@@ -210,6 +210,7 @@ public class ModelManager {
     }
     public boolean hasSamples() { return ( numberOfSamples() != 0 ); }
     public boolean currentSampleImageExists() { return ( getCurrentSampleImage() != null ); }
+    public boolean currentSampleIsCalibrated() { return ( getCurrentSample().isCalibrated() ); }
     public boolean getCalibrationMarked() { return sampleVector.getCalibrationMarked(); }
     public boolean getOriginMarked() { return sampleVector.getOriginMarked(); }
     public boolean getZoomMarked() { return sampleVector.getZoomMarked(); }

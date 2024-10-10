@@ -29,7 +29,8 @@ public final class MenuBar extends JMenuBar {
             miReadAndStoreAll, miReadAndStoreAs, miReadAndStoreOne;
     private MenuTaskMenuItem miLoadSession, miSaveSession, miLoadMeasurements, miSaveMeasurements, miLoadImages, miExport, miOutlines,
             miSplitSample, miChooseSample, miFirst, miPrevious, miNext, miLast, miRemoveSamples,
-            miNewMeasurement, miRemoveMeasurement, miMoveCoordinate, miAllOrder, miCalibrationDistance, miCalibrationDistanceAll,
+            miNewMeasurement, miRemoveMeasurement, miMoveCoordinate, miAllOrder, 
+            miClearCalibration, miCalibrationDistance, miCalibrationDistanceAll,
             miChooseMeasurement, miChooseAllMeasurements, miClearZoom,
             miResamplingPower, miHighestFFTCoefficient, miNormalizationIndex, miOutlineSpline, miFourierAnalysisMethod,
             miMeasurementColor;
@@ -83,6 +84,7 @@ public final class MenuBar extends JMenuBar {
 
         // Build the calibration menu items:
         miAllOrder = makeMenuTaskMenuItem(new ChangeAllOrderMenuTask(controller),listener);
+        miClearCalibration = makeMenuTaskMenuItem(new ClearCalibrationMenuTask(controller),listener);
         miCalibrationDistance = makeMenuTaskMenuItem(new ChangeCalibrationDistanceMenuTask(controller,false),listener);
         miCalibrationDistanceAll = makeMenuTaskMenuItem(new ChangeCalibrationDistanceMenuTask(controller,true),listener);
         miCalibrate = makeMenuItem("Calibrate current sample","Specify (via mouse click) the calibration line for the current sample",listener);
@@ -109,7 +111,7 @@ public final class MenuBar extends JMenuBar {
         
         // Build the advanced menu items:
         miReadAndStoreAll = makeMenuItem("all at once","Read all images as soon as available and store all in memory.",listener);
-        miReadAndStoreAs  = makeMenuItem("as encoutered","Read images as needed and store all in memory.",listener);
+        miReadAndStoreAs  = makeMenuItem("as encountered","Read images as needed and store all in memory.",listener);
         miReadAndStoreOne = makeMenuItem("never store","Read images as needed but never store in memory.",listener);
  
     }
@@ -173,6 +175,7 @@ public final class MenuBar extends JMenuBar {
         JMenu calibrationMenu = new JMenu("Calibration");
         this.add(calibrationMenu);
         calibrationMenu.add(miAllOrder);
+        calibrationMenu.add(miClearCalibration);
         calibrationMenu.add(miCalibrationDistance);
         calibrationMenu.add(miCalibrationDistanceAll);
         calibrationMenu.add(miCalibrate);

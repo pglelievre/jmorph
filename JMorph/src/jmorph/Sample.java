@@ -294,10 +294,17 @@ public final class Sample {
         return zoom.isMeasured();
     }
 
+    /** Clears the calibration for this sample. */
+    public void clearCalibration() {
+        calibration.clear();
+        origin.clear();
+        calibrationDistance = Measurement.NULL_CALIBRATION_DISTANCE;
+    }
+
     /** Returns true if the sample image has been calibrated.
      * The sample image is considered to have been calibrated if
      * 1) the Calibration measurement has been defined (the user clicked on two points), and
-     * 2) the calibration distance has been defined (ther user entered a real-space distance).
+     * 2) the calibration distance has been defined (the user entered a real-space distance).
      * @return 
      */
     public boolean isCalibrated() {

@@ -308,6 +308,7 @@ public final class JMorph extends JFrameExit {
     public BufferedImage getCurrentSampleImage() { return modelManager.getCurrentSampleImage(); }
     public boolean hasSamples() { return modelManager.hasSamples(); }
     public boolean currentSampleImageExists() { return modelManager.currentSampleImageExists(); }
+    public boolean currentSampleIsCalibrated() { return modelManager.currentSampleIsCalibrated(); }
     public boolean getCalibrationMarked() { return modelManager.getCalibrationMarked(); }
     public boolean getOriginMarked() { return modelManager.getOriginMarked(); }
     public boolean getZoomMarked() { return modelManager.getZoomMarked(); }
