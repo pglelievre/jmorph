@@ -81,12 +81,9 @@ public final class JMorph extends JFrameExit {
     
     // -------------------- Implemented methods from class JFrameExit --------------------
     
-    private String versionNumberString() {
-        return "1.0"; // you must be able to parse this as a double
-    }
     @Override
-    protected String versionString() {
-        return versionNumberString(); // I could add more information here e.g. a date.
+    protected String versionNumberString() {
+        return "1.0"; // you must be able to parse this as a double
     }
     @Override
     protected String rulesString() {
@@ -102,11 +99,6 @@ public final class JMorph extends JFrameExit {
     protected String contactString() {
         return "Contact: plelievre@mta.ca";
     }
-    
-//    public int versionInt() {
-//        double d =  Double.parseDouble( versionNumberString() );
-//        return (int)Math.floor(d);
-//    }
     
     // -------------------- Getters: --------------------
     

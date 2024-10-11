@@ -222,8 +222,8 @@ public final class MenuBar extends JMenuBar {
             Object src = event.getSource();
             if (src==null) { return; }
             // Deal with the MenuTaskMenuItems:
-            if (src instanceof MenuTaskMenuItem) {
-                MenuTaskMenuItem tmi = (MenuTaskMenuItem) src; // cast
+            if (src instanceof MenuTaskMenuItem tmi) { // cast
+                // cast
                 tmi.execute();
                 return;
             }
